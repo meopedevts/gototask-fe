@@ -1,7 +1,12 @@
-import { ProfileForm } from '@/components/profile-form'
+// import { ProfileForm } from '@/components/profile-form'
 import { Separator } from '@/components/ui/separator'
+import dynamic from 'next/dynamic'
 
 export default function Profile() {
+  const ProfileForm = dynamic(() => import('@/components/profile-form'), {
+    ssr: false,
+  })
+
   return (
     <div className="flex flex-col space-y-4">
       <div>

@@ -14,10 +14,10 @@ const options: SidebarOtions[] = [
     label: 'Perfil',
     href: '/settings',
   },
-  {
-    label: 'Conta',
-    href: '/settings/account',
-  },
+  // {
+  //   label: 'Conta',
+  //   href: '/settings/account',
+  // },
   {
     label: 'Aparência',
     href: '/settings/appearance',
@@ -31,11 +31,6 @@ const SettingsSidebar = () => {
     <ul className="mx-4 flex w-60 flex-col gap-1">
       {options.map((option, index) => {
         return (
-          // <li
-          //   key={index}
-          // >
-          //   <Link href={option.href}>{option.label}</Link>
-          // </li>
           <Link
             href={option.href}
             key={index}
